@@ -3,6 +3,18 @@ import WelcomeBack from "../components/LoginWelcome.vue";
 import Button from "primevue/button";
 
 import { login } from "../../core/services/auth";
+import { userState } from "../state/user";
+import { useRouter } from "vue-router";
+const router = useRouter();
+async function onLoginClick() {
+  try {
+    const user = await login();
+    userState.user = user;
+    router.push("/");
+  } catch (error) {
+    alert("Ocurrio un error al iniciar sesión");
+  }
+}
 </script>
 
 <template>
@@ -24,7 +36,7 @@ import { login } from "../../core/services/auth";
       label="Iniciar sesión"
       icon="pi pi-google"
       iconPos="left"
-      @click="login"
+      @click="onLoginClick"
     />
   </main>
 </template>
