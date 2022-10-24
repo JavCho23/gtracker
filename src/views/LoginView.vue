@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import WelcomeBack from "../components/LoginWelcome.vue";
 import Button from "primevue/button";
+
+import { login } from "../../core/services/auth";
 </script>
 
 <template>
@@ -17,8 +19,13 @@ import Button from "primevue/button";
       <WelcomeBack msg="Javier" />
     </div>
   </header>
-  <main>
-    <Button label="Iniciar sesión" icon="pi pi-google" iconPos="left" />
+  <main class="flex justify-content-center align-items-center">
+    <Button
+      label="Iniciar sesión"
+      icon="pi pi-google"
+      iconPos="left"
+      @click="login"
+    />
   </main>
 </template>
 

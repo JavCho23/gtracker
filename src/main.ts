@@ -8,6 +8,8 @@ import "primevue/resources/primevue.min.css"; //core css
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
 
+import "../core/services/firebase";
+
 import "./assets/main.css";
 
 const app = createApp(App);
