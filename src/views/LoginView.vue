@@ -12,6 +12,7 @@ async function onLoginClick() {
     userState.user = user;
     router.push("/");
   } catch (error) {
+    console.log(error);
     alert("Ocurrio un error al iniciar sesión");
   }
 }

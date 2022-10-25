@@ -6,6 +6,7 @@ import {
   type UserCredential,
 } from "firebase/auth";
 
+import { getUserOrSaveIt } from "../../firestore/user";
 const provider = new GoogleAuthProvider();
 
 export const Authorization = getAuth(App);
@@ -26,5 +27,6 @@ export async function singIn() {
   }
   const token = credential.accessToken;
   const user = result.user;
+  await getUserOrSaveIt(user);
   return { token, user };
 }
