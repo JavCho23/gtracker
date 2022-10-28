@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { userState } from "@/state/user";
-
-const user = userState.user;
-const firstName = user?.displayName?.split(" ")[0];
+import HomeHeader from "@/components/HomeHeader.vue";
+import TrainingList from "@/components/TrainingList.vue";
 </script>
 
 <template>
-  <h1>Bienvenido(a) {{ firstName }}</h1>
-  <br />
-  <h3>Estamos construyendo el tracker...</h3>
+  <div class="card">
+    <div class="card-container">
+      <HomeHeader />
+      <TrainingList />
+    </div>
+  </div>
 </template>
