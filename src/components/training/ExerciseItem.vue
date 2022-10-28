@@ -13,12 +13,12 @@ defineProps({
 </script>
 
 <template>
-  <Card class="shadow-none">
+  <Card class="shadow-none w-7rem min-w-max">
     <template #title>
       <h1 class="text-base">{{ exercise.name }}</h1>
     </template>
     <template #content>
-      <ul>
+      <ul class="list-none p-0 m-0 flex flex-column align-items-center">
         <li>{{ exercise.weight }} kg</li>
         <li>{{ exercise.reps }} reps</li>
         <li>{{ exercise.sets }} sets</li>
@@ -27,3 +27,9 @@ defineProps({
   </Card>
   <Divider layout="vertical" />
 </template>
+
+<style scoped>
+.p-card-body {
+  padding: 0;
+}
+</style>
