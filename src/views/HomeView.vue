@@ -1,13 +1,11 @@
 <script setup lang="ts">
 import HomeHeader from "@/components/HomeHeader.vue";
-import TrainingList from "@/components/TrainingList.vue";
+import TrainingList from "@/components/training/TrainingList.vue";
 </script>
 
 <template>
-  <div class="card">
-    <div class="card-container">
-      <HomeHeader />
-      <TrainingList />
-    </div>
-  </div>
+  <main class="p-4">
+    <HomeHeader />
+    <TrainingList />
+  </main>
 </template>

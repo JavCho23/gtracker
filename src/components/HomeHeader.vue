@@ -6,9 +6,7 @@ const firstName = user?.displayName?.split(" ")[0];
 </script>
 
 <template>
-  <div class="header">
+  <header class="p-component">
     <h1>Bienvenido(a) {{ firstName }}</h1>
-    <br />
-    <h3>Estamos construyendo el tracker...</h3>
-  </div>
+  </header>
 </template>
